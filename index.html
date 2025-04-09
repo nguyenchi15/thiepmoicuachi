@@ -2,100 +2,75 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Thiệp Mời Tốt Nghiệp - Nguyên Chi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyên Chi Tốt Nghiệp</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #fdfbfb, #ebedee);
-      font-family: 'Open Sans', sans-serif;
-      overflow: hidden;
-    }
-    .container {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9e4ec, #e0f7fa);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 2s ease-in-out;
+      padding: 2rem;
     }
     h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 3rem;
-      color: #4a4a4a;
-      margin-bottom: 10px;
-    }
-    h2 {
-      color: #555;
-      font-size: 1.2rem;
-      margin: 0 0 30px;
-    }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 20px auto;
-      color: #333;
-      animation: slideUp 2s ease-in-out;
+      font-size: 2.5rem;
+      color: #d81b60;
+      animation: popIn 1s ease-out;
     }
     .info {
-      margin-top: 40px;
-      font-weight: bold;
-      color: #222;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      line-height: 1.6;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      0% { transform: translateY(20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .confetti {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
+    .message {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      background: #fff8fb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeInUp 1.2s ease-out;
     }
     iframe {
-      margin-top: 30px;
-      width: 300px;
-      height: 180px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 2rem;
+      border: none;
+      border-radius: 1rem;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-
-<canvas class="confetti"></canvas>
-
-<div class="container">
-  <h1>Nguyên Chi đã tốt nghiệp! 🎓</h1>
-  <h2>25.04.2025 – 10:30 | Thủ Đức</h2>
-  <p>Cảm ơn bạn đã đồng hành cùng Chi trong suốt chặng đường vừa qua nghen, Chi sẽ rất vui nếu bạn sắp xếp được để đến chung vui cùng lễ tốt nghiệp của Chi nà ^^</p>
+  <h1>Nguyên Chi tốt nghiệp rùiii 🎓✨</h1>
 
   <div class="info">
-    📍 306 Võ Văn Hát, phường Long Trường, TP. Thủ Đức, TP. HCM
+    <p><strong>Thời gian:</strong> 25.04.2025 | 10:30</p>
+    <p><strong>Địa điểm:</strong> 306 Võ Văn Hát, phường Long Trường, TP. Thủ Đức, TP. HCM</p>
   </div>
 
-  <iframe src="https://www.youtube.com/embed/uh04J3_Eweg?start=1991&autoplay=1&mute=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+  <div class="message">
+    <p>Cảm ơn bạn vì đã có mặt trong khoảnh khắc ý nghĩa này cùng Chi nha.</p>
+    <p>Dù tụi mình đã đồng hành cùng nhau một đoạn dài hay chỉ mới một xíu ngắn ngủi thui,</p>
+    <p>Chi vẫn trân quý lắm nà vì bạn là một phần kỉ niệm đẹp trong hành trình của Chi đó ^^</p>
+    <p>Mong mình vẫn sẽ tiếp tục có thật nhiều khoảnh khắc dễ thương cùng nhau ở những hành trình sau nữa nghen ~</p>
+    <p><strong>Chi sẽ rất vui nếu thấy sự có mặt của bạn trong buổi lễ tốt nghiệp của Chi ó nheee 💛</strong></p>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-  // Tạo hiệu ứng pháo giấy rơi
-  const duration = 5 * 1000;
-  const animationEnd = Date.now() + duration;
-  const confettiInterval = setInterval(function() {
-    if (Date.now() > animationEnd) return clearInterval(confettiInterval);
-    confetti({
-      startVelocity: 30,
-      spread: 360,
-      ticks: 60,
-      zIndex: 0
-    });
-  }, 400);
-</script>
-
+  <iframe width="300" height="180" src="https://www.youtube.com/embed/BPjXOFW8HrQ?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 </html>
